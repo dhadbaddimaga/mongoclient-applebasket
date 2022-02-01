@@ -48,7 +48,7 @@ public class BasketRepository {
 		
 		BasicDBObject lkup = new BasicDBObject();
 		lkup.append("from", "apples");
-		lkup.append("localfield", "_id");
+		lkup.append("localField", "_id");
 		lkup.append("foreignField", "basketid");
 		lkup.append("as", "apples" );
 	    
@@ -73,7 +73,7 @@ public class BasketRepository {
 			basketsResponse.add(doc);
 		}
 		
-		return null;
+		return basketsResponse;
 	}
 	
 	
@@ -87,7 +87,7 @@ public class BasketRepository {
 //	       }	
 //	  },
 //
-//	  { $match : { _id : ObjectId("61e8ef9de763f160ecfe403c") } }
+//	  { $match : { _id : objId1 } }
 
 	
 }
